@@ -24,7 +24,7 @@ mongoose.connect(MONOGODB_URI).then((res) => {
 
 // get all todos
 app.get("/api/todos",async (req,res) => {
-    const todos = await todoModel.findById();
+    const todos = await todoModel.find();
     res.json(todos);
 
 });
